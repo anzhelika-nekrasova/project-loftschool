@@ -1,6 +1,35 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  //.hello-world
+  //  +icon('check', 'hello-world__block')
+  //  .inlined-svg
+  
+  
+  .front-page-bg
+    .container
+      a.button.button-login(href="#") Авторизоваться
+      .block-front
+        .about
+          .about__photo
+            img(src="assets/images/about/photo.jpg")
+          h1 Анжелика Некрасова
+          p Личный сайт веб разработчика
+          
+          ul.social
+            li.social__item
+              a.social__link.social__link--vk(href="#")
+            li.social__item
+              a.social__link.social__link--github(href="#")
+            li.social__item
+              a.social__link.social__link--in(href="#")
+          
+        nav.front-page-menu
+          a.front-page-menu__item(href="#") Мои работы
+          .front-page-menu__line
+          a.front-page-menu__item(href="#") Обо мне
+          .front-page-menu__line
+          a.front-page-menu__item(href="#") Блог
+      
+    p.copyright © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018
+

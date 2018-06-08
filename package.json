@@ -1,7 +1,7 @@
 {
   "name": "gulp-122017",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Шевырталова Анжелика Васильевна\r > Loftschool. Продвинутый веб\r > Курс от 04.06.2018\r > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)",
   "main": "gulpfile.js",
   "scripts": {
     "dev:mpa": "cross-env NODE_ENV=development gulp",
@@ -10,7 +10,7 @@
     "reg": "node reg-util.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "anzhelika",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.5.0",
@@ -74,5 +74,13 @@
     "request": "^2.87.0",
     "signale": "^1.1.0",
     "vue": "2.5.13"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anzhelika-nekrasova/project-loftschool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anzhelika-nekrasova/project-loftschool/issues"
+  },
+  "homepage": "https://github.com/anzhelika-nekrasova/project-loftschool#readme"
 }
