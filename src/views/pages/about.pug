@@ -8,24 +8,16 @@ block scripts
 
 block content
   section.hero
-    -
-      var socials = [
-        ['vk', 'http://vk.com'],
-        ['github', 'http://gh.com'],
-        ['in', 'http://in.com']
-      ]
-    .hero__links
-      ul.social
-        each item in socials
-          li.social__item
-            a(href=`${item[1]}`).social__link #{item[0]}
+
+    +socials('header')
+
     .hero__menu
       a(href="").hamburger
 
     .hero__title
       .section-title
         .section-title__portfolio
-      
+
     .user.hero__user
       .user__photo
         img(src="assets/images/about/photo.jpg").user__pic-img
@@ -34,8 +26,13 @@ block content
         .user__info Личный сайт разработчика
 
     a(href="").down-btn.hero__down-btns
-  
+
+
   section.block-content.page-about
+
+    include ../common/triangle
+    +triangle('about')
+
     .block-content__left
       .block-content__triangle
         .triangle.triangle_fill_white
@@ -53,7 +50,7 @@ block content
               .user-description__title
                 .title.block-subtitle.user-description__block-subtitle
                   .title__style
-                    span Кто я 
+                    span Кто я
               .user-description__text.text-content
                 p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
@@ -69,7 +66,7 @@ block content
         .technologies__description.text-content
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .technologies__content
-          - 
+          -
             var skills = [
               ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
               ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],

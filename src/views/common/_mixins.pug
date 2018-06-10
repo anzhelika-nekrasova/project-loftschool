@@ -1,5 +1,7 @@
-mixin icon(iconName, iconClass)
-  svg(class=`${iconClass}`)
+include ../common/socials
+
+mixin icon(iconName, iconClasses)
+  svg(class=`${iconClasses}`)
     use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)

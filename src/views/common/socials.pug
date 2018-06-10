@@ -1,0 +1,15 @@
+mixin socials(modClass)
+  -
+    var socials = [
+      ['vk', 'http://vk.com'],
+      ['github', 'http://gh.com'],
+      ['in', 'http://in.com']
+    ]
+  .hero__links
+    ul(class=`social social--${modClass}`)
+      each item in socials
+        li.social__item
+          a(
+            href=`${item[1]}`
+            class=`social__link social__link--${item[0]}`
+          )
