@@ -1,0 +1,38 @@
+.social {
+    display: flex;
+    height: auto;
+    width: auto;
+    &__item {
+        list-style: none;
+        float: left;
+        margin: 0 3px;
+    }
+    &__link {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.social__link--vk {
+    background: svg-load('vk.svg', fill=$green) center center no-repeat;
+    &:hover {
+        background: svg-load('vk.svg', fill=$green-hover) center center no-repeat;
+    }
+}
+
+.social__link--github {
+    background: svg-load('github.svg', fill=$green) center center no-repeat;
+    &:hover {
+        background: svg-load('github.svg', fill=$green-hover) center center no-repeat;
+    }
+}
+
+.social__link--in {
+    background: svg-load('in.svg', fill=$green) center center no-repeat;
+    &:hover {
+        background: svg-load('in.svg', fill=$green-hover) center center no-repeat;
+    }
+}

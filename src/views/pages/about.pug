@@ -7,4 +7,84 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero
+    -
+      var socials = [
+        ['vk', 'http://vk.com'],
+        ['github', 'http://gh.com'],
+        ['in', 'http://in.com']
+      ]
+    .hero__links
+      ul.social
+        each item in socials
+          li.social__item
+            a(href=`${item[1]}`).social__link #{item[0]}
+    .hero__menu
+      a(href="").hamburger
+
+    .hero__title
+      .section-title
+        .section-title__portfolio
+      
+    .user.hero__user
+      .user__photo
+        img(src="assets/images/about/photo.jpg").user__pic-img
+      .user__description
+        .user__name Анжелика Некрасова
+        .user__info Личный сайт разработчика
+
+    a(href="").down-btn.hero__down-btns
+  
+  section.block-content.page-about
+    .block-content__left
+      .block-content__triangle
+        .triangle.triangle_fill_white
+
+      .about
+        .about__title
+          .title.block-title.about__block-title
+            .title__style
+              span Обо мне
+        .about__content
+          .user-description
+            .user-description__image
+              img(src="assets/images/about/user.jpg").user-description__avatar
+            .user-description__data
+              .user-description__title
+                .title.block-subtitle.user-description__block-subtitle
+                  .title__style
+                    span Кто я 
+              .user-description__text.text-content
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+
+    .block-content__right.technologies
+      .block-content__triangle
+        .triangle.triangle_fill_beige
+
+        .technologies__title
+          .title.block-subtitle.technologies__block-subtitle
+            .title__style
+              span Чем я могу быть вам полезен
+        .technologies__description.text-content
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .technologies__content
+          - 
+            var skills = [
+              ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
+              ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
+              ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
+            ]
+
+          ul.skills-list
+            each skillsrow in skills
+              li.skills-list__item.skills-row
+                .skills-row__title #{skillsrow[0]}
+                ul.skills-row__list
+                  each skill in skillsrow[1]
+                    li.skills-row__item
+                      figure.skill(data-percents="70")
+                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                        .skill__title #{skill[0]}

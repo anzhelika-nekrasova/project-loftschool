@@ -1,0 +1,39 @@
+.hero {
+    background: url(assets/images/styles/section-user-bg.jpg) top center no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__links {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__user {
+        color: #fff
+    }
+
+    &__menu {
+        position: absolute;
+        top: 28px;
+        right: 30px;
+    }
+
+    &__title {
+        max-width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__down-btns {
+        position: absolute;
+        bottom: 75px
+    }
+}
+

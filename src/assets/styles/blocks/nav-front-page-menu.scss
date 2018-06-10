@@ -15,17 +15,14 @@
     font-size: 16px;
     line-height: 45px;
     font-weight: 500;
+    border-right: 2px solid #73c8c0;
     // padding: 0 30px;
     background: rgba(6, 172, 153, 0.8);
     width: 100%;
+    &:last-child {
+        border: none
+    }
     &:hover {
         background: rgba(7, 139, 131, 0.8);
     }
-}
-
-.front-page-menu__line {
-    height: 45px;
-    width: 2px;
-    background: #73c8c0;
-    float: left;
 }

@@ -10,13 +10,13 @@ block content
     .container
       a.button.button-login(href="#") Авторизоваться
       .block-front
-        .about
-          .about__photo
+        .user.block-front__user
+          .user__photo
             img(src="assets/images/about/photo.jpg")
-          h1 Анжелика Некрасова
-          p Личный сайт веб разработчика
+          .user__name Анжелика Некрасова
+          .user__info Личный сайт веб разработчика
           
-          ul.social
+          ul.social.block-front__social
             li.social__item
               a.social__link.social__link--vk(href="#")
             li.social__item
@@ -26,9 +26,7 @@ block content
           
         nav.front-page-menu
           a.front-page-menu__item(href="#") Мои работы
-          .front-page-menu__line
           a.front-page-menu__item(href="#") Обо мне
-          .front-page-menu__line
           a.front-page-menu__item(href="#") Блог
       
     p.copyright © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018
