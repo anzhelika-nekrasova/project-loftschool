@@ -7,36 +7,12 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
-
-    +socials('header')
-
-    .hero__menu
-      a(href="").hamburger
-
-    .hero__title
-      .section-title
-        .section-title__portfolio
-
-    .user.hero__user
-      .user__photo
-        img(src="assets/images/about/photo.jpg").user__pic-img
-      .user__description
-        .user__name Анжелика Некрасова
-        .user__info Личный сайт разработчика
-
-    a(href="").down-btn.hero__down-btns
-
 
   section.block-content.page-about
 
-    include ../common/triangle
     +triangle('about')
 
     .block-content__left
-      .block-content__triangle
-        .triangle.triangle_fill_white
-
       .about
         .about__title
           .title.block-title.about__block-title
@@ -52,8 +28,8 @@ block content
                   .title__style
                     span Кто я
               .user-description__text.text-content
-                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+                p Я веб разработчик из Кирова. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
 
     .block-content__right.technologies
       .block-content__triangle
@@ -68,9 +44,9 @@ block content
         .technologies__content
           -
             var skills = [
-              ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-              ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-              ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
+              ['Frontend', [['HTML', 30], ['CSS3', 50], ['JavaScript & jQuery', 70]]],
+              ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70], ['Mongo.db', 70]]],
+              ['Workflow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
             ]
 
           ul.skills-list
@@ -85,3 +61,28 @@ block content
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
                         .skill__title #{skill[0]}
+
+  section.map
+    .google-map
+      img(src="assets/images/map.jpg", alt="")
+    .map__data.map__data--position
+      .contacts
+        .title.block-subtitle.contacts__block-subtitle
+          .title__style
+            span Контакты
+        .contacts__data
+          ul.contacts__list
+            -
+              var contacts = [
+                ['envelope', 'skype_kdn'],
+                ['envelope', 'astahov@gmail.com'],
+                ['envelope', '+7 931 200 93 24'],
+                ['envelope', 'г.Новосибирск, ул. Инская, д. 5']
+              ]
+            each item in contacts
+              li.contacts__item.contacts-row
+                .contacts__icon
+                  +icon(`${item[0]}`, 'contacts__icon-img')
+                .contacts__title #{item[1]}
+  
+  

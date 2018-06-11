@@ -1,6 +1,14 @@
 .hamburger {
+    display: block;
+}
+
+.hamburger__icon {
     width: 40px;
     height: 35px;
-    display: block;
-    background: svg-load('hamburger.svg', fill=$white) center center no-repeat;
+    fill: #fff;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
 }

@@ -1,0 +1,28 @@
+.contacts__icon-img {
+    width: 25px;
+    height: 25px;
+    fill: $green;
+    float: left;
+}
+
+.contacts__icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+.contacts-row {
+    width: 100%;
+    float: left;
+    margin: 10px;
+}
+
+.contacts__title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contacts__block-subtitle {
+    margin-bottom: 25px;
+}

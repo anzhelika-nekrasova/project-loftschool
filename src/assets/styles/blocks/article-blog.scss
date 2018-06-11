@@ -1,0 +1,24 @@
+.article-blog {
+    padding-bottom: 70px;
+    margin-bottom: 60px;
+    border-bottom: 5px solid rgba(55, 62, 66, 0.07);
+
+    &:last-child {
+        border: none;
+        margin-bottom: 0;
+    }
+    
+    &__title {
+        font-size: 35px;
+        margin: 0 0 20px;
+        
+        span {
+            text-align: left;
+        }
+    }
+
+    &__date {
+        color: $green;
+        margin-bottom: 25px;
+    }
+}

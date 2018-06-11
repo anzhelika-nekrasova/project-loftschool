@@ -1,6 +1,8 @@
 .block-content {
     width: 100%;
     position: relative;
+    float: left;
+    display: flex;
 
     &__left {
         width: 50%;
@@ -8,12 +10,16 @@
         display: flex;
         justify-content: flex-end;
         padding: 0 20px 0 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     &__right {
         width: 50%;
         float: left;
-        padding: 0 0 0 40px;
+        padding: 0 60px 0 40px;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 

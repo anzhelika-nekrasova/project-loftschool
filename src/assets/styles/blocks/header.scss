@@ -1,11 +1,14 @@
-.hero {
+.header {
     background: url(assets/images/styles/section-user-bg.jpg) top center no-repeat;
     background-size: cover;
-    min-height: 600px;
+    min-height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
+    height: 100vh;
+    float: left;
 
     &__links {
         position: absolute;
@@ -33,7 +36,23 @@
 
     &__down-btns {
         position: absolute;
-        bottom: 75px
+        bottom: 75px;
+        z-index: 100;
     }
 }
 
+.header__social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    svg {
+        fill: #fff;
+        opacity: 0.5;
+
+        &:hover {
+            fill: #fff;
+            opacity: 1;
+        }
+    }
+}

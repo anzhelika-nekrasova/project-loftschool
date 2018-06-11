@@ -1,2 +1,16 @@
-footer.footer
-  h2 Copyright &copy;
+section.footer
+    .footer__row.footer__row--top
+      .footer__col
+        nav.footer-menu
+          each item in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
+            a(href="").footer-menu__item #{item}
+
+      .footer__col.footer__col_justify_end
+        +socials('footer_socials')
+
+    .footer__row
+      .footer__col
+        .footer__text
+          p Я веб-разработчик из Кирова, и этот сайт я сделала в рамках #[br] обучения в Школе онлайн образования LoftSchool. 
+      .footer__col.footer__col_justify_end
+        p © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018

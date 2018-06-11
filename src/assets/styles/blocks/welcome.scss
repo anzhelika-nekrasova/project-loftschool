@@ -28,6 +28,14 @@
         margin: 0 auto;
         margin-top: 20px;
     }
+
+    &__social svg {
+        fill: $green;
+
+        &:hover {
+            fill: $green-hover;
+        }
+    }
 }
 
 .button {

@@ -1,4 +1,33 @@
-.triangle_fill_white {
-    width: 100%;
-    height: 178px;
-}
+.triangle {
+    width:  100%;
+    height: 174px;
+  
+    position: absolute;
+    top: -174px;
+  
+    svg {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  
+    &--about {
+      .left {
+        fill: #efeee9;
+      }
+
+      .right{
+        fill: #eeebdf;
+      }
+    }
+
+    &--blog {
+      .left {
+        fill: #fff;
+      }
+
+      .right{
+        fill: #fff;
+      }
+    }
+  }

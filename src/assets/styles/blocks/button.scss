@@ -1,5 +1,10 @@
 .down-btn {
    width: 25px;
    height: 25px;
-   background: svg-load('arrow_down.svg', fill=$white) center center no-repeat; 
+   fill: #fff;
+   opacity: 0.7;
+
+   &:hover {
+       opacity: 1;
+   }
 }

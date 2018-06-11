@@ -1,9 +1,9 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'icon-ok icon-ok--index')
-    //.inlined-svg
+  //.hello-world
+  //  +icon('check', 'icon-ok icon-ok--index')
+  //.inlined-svg
 
 
   .front-page-bg
@@ -15,14 +15,8 @@ block content
             img(src="assets/images/about/photo.jpg")
           .user__name Анжелика Некрасова
           .user__info Личный сайт веб разработчика
-
-          ul.social.block-front__social
-            li.social__item
-              a.social__link.social__link--vk(href="#")
-            li.social__item
-              a.social__link.social__link--github(href="#")
-            li.social__item
-              a.social__link.social__link--in(href="#")
+            
+          +socials('block-front__social')
 
         nav.front-page-menu
           a.front-page-menu__item(href="#") Мои работы

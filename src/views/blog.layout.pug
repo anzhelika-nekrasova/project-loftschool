@@ -15,9 +15,8 @@ html(lang="ru")
     .wrapper
       .maincontent
         include ./common/header.pug
-        block content  
-        .footer-position
-          include ./common/footer.pug
+        block content 
+        include ./common/footer.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')

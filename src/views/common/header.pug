@@ -1,0 +1,21 @@
+section.header
+
+    +socials('header__social')
+
+    .header__menu
+      a(href="").hamburger
+        +icon('hamburger', 'hamburger__icon')
+
+    .header__title
+      .section-title
+        .section-title__portfolio
+
+    .user.header__user
+      .user__photo
+        img(src="assets/images/about/photo.jpg").user__pic-img
+      .user__description
+        .user__name Анжелика Некрасова
+        .user__info Личный сайт разработчика
+
+    a(href="").header__down-btns
+      +icon('arrow_down', 'down-btn')
