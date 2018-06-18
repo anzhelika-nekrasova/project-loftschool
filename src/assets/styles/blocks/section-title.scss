@@ -5,5 +5,10 @@
         width: 1180px;
         height: 300px;
         background: svg-load('portfolio_header.svg', fill=$white) center center no-repeat;
+
+        @media (max-width: 768px) {
+            background: none;
+            display: none;
+        }
     }
 }

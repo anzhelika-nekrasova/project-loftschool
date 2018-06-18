@@ -1,0 +1,46 @@
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) [reviews-left] repeat(4, 1fr) [reviews-left-e] repeat(4, 1fr) [reviews-right] repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        ". . left left left left right right right right . .";
+    grid-column-gap: 20px;
+}
+
+.reviews__left {
+    grid-column: reviews-left / reviews-left-e;
+}
+
+.reviews__right {
+    grid-column: reviews-left-e / reviews-right;
+}
+
+.reviews__content {
+    width: 100%;
+    margin-top: 45px;
+    padding-top: 60px;
+    background: url(assets/images/styles/quotes.png) top left no-repeat;
+}
+
+.reviews__user {
+    display: flex;
+    align-items: center;
+}
+
+.reviews__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+}
+
+.reviews__name {
+    color: $green;
+    font-weight: 500;
+
+    span {
+        font-weight: 400;
+    }
+}

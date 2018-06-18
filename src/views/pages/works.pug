@@ -1,0 +1,63 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+
+    section.works
+
+        +triangle('works')
+
+        .my-works
+            .title.block-title.works__block-title
+                .title__style
+                    span Мои работы
+            
+            .block-content
+                .block-content__left
+                    .works__title
+                        .title.block-subtitle.works__block-subtitle
+                            .title__style
+                                span Чем я могу быть вам полезен
+                .block-content__right
+                    p fjbhfjbfjg
+        
+        .feedback
+            .feedback__title
+                .title.block-title.works__block-title-about
+                    .title__style
+                        span Что обо мне говорят
+            
+            .feedback__content
+                .reviews
+                    .reviews__left
+                        .reviews__content
+                            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            .reviews__user
+                                .reviews__avatar
+                                    img(src="assets/images/photo/reviews-photo-1.png")
+                                .reviews__name Ковальчук Дмитрий #[br]
+                                    span основатель Loftschool
+                    .reviews__right
+                        .reviews__content
+                            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                            .reviews__user
+                                .reviews__avatar
+                                    img(src="assets/images/photo/reviews-photo-2.png")
+                                .reviews__name Сабанцев Владимир #[br]
+                                    span преподаватель
+
+            .feedback__form
+                .blur-form
+                    .blur
+                    .from-message
+                        form.contact_form(action='', method='post')
+                            input(type='text', name='name', placeholder='Имя', required='')
+                            input(type='text', name='name', placeholder='Email', required='')
+                            textarea(name='message', placeholder='Ваше сообщение', required='', rows='5')
+
+            .feedback__up

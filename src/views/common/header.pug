@@ -1,10 +1,15 @@
-section.header
+header.header
 
-    +socials('header__social')
+  .header__top.header-top-container
 
-    .header__menu
+    .header__left
+      +socials('header__social')
+
+    .header__right
       a(href="").hamburger
         +icon('hamburger', 'hamburger__icon')
+
+  .header__center
 
     .header__title
       .section-title
@@ -17,5 +22,6 @@ section.header
         .user__name Анжелика Некрасова
         .user__info Личный сайт разработчика
 
+  .header__bottom
     a(href="").header__down-btns
-      +icon('arrow_down', 'down-btn')
+        +icon('arrow_down', 'down-btn')

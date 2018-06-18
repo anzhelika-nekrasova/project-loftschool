@@ -1,0 +1,31 @@
+.feedback {
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "title"
+        "reviews"
+        "form"
+        "up-bottom";
+    position: relative;
+    background: url(assets/images/styles/background-feedback.png) bottom center no-repeat;
+    background-size: cover;
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__reviews {
+        grid-area: reviews;
+    }
+
+    &__form{
+        grid-area: form;
+        justify-self: center;
+        position: relative;
+    }
+
+    &__up {
+        grid-area: up-bottom;
+    }
+}

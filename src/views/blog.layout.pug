@@ -13,10 +13,10 @@ html(lang="ru")
   body
     
     .wrapper
-      .maincontent
-        include ./common/header.pug
+      include ./common/header.pug
+      .content
         block content 
-        include ./common/footer.pug
+      include ./common/footer.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')

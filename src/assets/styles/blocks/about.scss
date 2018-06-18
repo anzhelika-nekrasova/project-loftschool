@@ -1,15 +1,30 @@
 .about {
     position: relative;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "about-title about-content";
+    grid-column-gap: 20px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 100%;
+        grid-template-rows: min-content 1fr;
+        grid-template-areas: 
+            "about-title"
+            "about-content";
+            grid-row-gap: 20px;
+    }
 
     &__title {
-        width: 350px;
-        height: auto;
-        position: absolute;
-        right: calc(100% + 30px);
-        top: 0;
-        white-space: nowrap;
-        display: flex;
-        justify-content: center;
+        grid-area: about-title;
+        position: relative;
+        justify-self: end;
+        width: 100%;
+    }
+
+    &__title-position {
+        
     }
 
     &__block-title {
@@ -28,7 +43,12 @@
     }
 
     &__content {
-        width: 443px;
+        grid-area: about-content;
+
+        @media (max-width: 1200px) {
+            max-width: 450px;
+            margin: 0 auto;
+        }
     }
     
 }
