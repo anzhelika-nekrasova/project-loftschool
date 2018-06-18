@@ -1,0 +1,10 @@
+.up-btn {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    opacity: 0.7;
+    transform: rotate(180deg);
+    &:hover {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,51 @@
+.title {
+    position: relative;
+    color: #373e42;
+    & span {
+        display: block;
+        font-family: 'bernier';
+        text-align: center;
+    }
+    &__style {
+        position: relative;
+    }
+    & span::before {
+        content: "";
+        width: 22px;
+        height: 5px;
+        display: block;
+        background: #000;
+        opacity: 0.2;
+        position: absolute;
+        left: -42px;
+        top: calc(50% - 2.5px);
+    }
+    & span::after {
+        content: "";
+        width: 22px;
+        height: 5px;
+        display: block;
+        background: #000;
+        opacity: 0.2;
+        position: absolute;
+        right: -42px;
+        top: calc(50% - 2.5px);
+    }
+}
+
+.block-title {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    font-size: 63px;
+    line-height: 1em;
+}
+
+.block-subtitle {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    font-size: 35px;
+    line-height: normal;
+    color: #455a64;
+}

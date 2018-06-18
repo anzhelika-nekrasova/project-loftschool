@@ -1,6 +1,34 @@
 .from-message {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0 20px;
+    padding-bottom: 65px;
+    &__button {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.from-message button {
+    display: block;
+    height: 45px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 500;
+    border-right: 2px solid #73c8c0;
+    // padding: 0 30px;
+    background: rgba(6, 172, 153, 0.8);
+    width: 100%;
+    &:last-child {
+        border: none
+    }
+    &:hover {
+        background: rgba(7, 139, 131, 0.8);
+    }
 }

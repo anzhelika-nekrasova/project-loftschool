@@ -1,8 +1,6 @@
 .works {
     position: relative;
-
     &__block-title {
-    
         &::before {
             content: "";
             width: 100%;
@@ -15,9 +13,7 @@
             left: 0;
         }
     }
-
-   &__block-title-about {
-       
+    &__block-title-about {
         &::before {
             content: "";
             width: 100%;
@@ -37,4 +33,8 @@
 .my-works {
     position: relative;
     background: #faf8f0;
+}
+
+.my-works-main-title {
+    padding: 50px 0 50px;
 }
