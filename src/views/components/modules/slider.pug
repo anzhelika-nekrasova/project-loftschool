@@ -1,0 +1,13 @@
+script(type="text/x-template")#slider
+  .slider
+    info(
+      :work="currentWork"
+    )
+    display(
+      :work="currentWork"
+    )
+    buttons(
+      :works="works"
+      :currentIndex="currentIndex"
+      @slide="handleSlide"
+    )
