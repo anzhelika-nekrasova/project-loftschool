@@ -1,47 +1,84 @@
 .blog-content {
     position: relative;
     width: 100%;
-    float: left;
+    display: grid;
+    grid-template-columns: 23% 77%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+    position: relative;
     padding-top: 50px;
+    grid-column-gap: 120px;
     &__left {
-        width: 30%;
-        float: left;
+        grid-area: left;
         display: flex;
         justify-content: flex-end;
-        padding-right: 120px;
-        display: flex;
         flex-wrap: wrap;
     }
     &__right {
-        width: 70%;
+        grid-area: right;
         max-width: 900px;
         display: flex;
         flex-wrap: wrap;
     }
 }
 
-.menu-blog {
+.blog__article-titles {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blog__article-list {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     position: relative;
-    &__title-item {
-        width: 100%;
-        float: left;
-        display: block;
-        text-align: right;
-        padding: 10px 0;
-        &--active {
-            font-weight: 600;
-            border-right: 3px solid $green;
-        }
-    }
-    &__title-link {
-        color: #455a64;
-        font-size: 16px;
-        line-height: 1.5;
-        text-decoration: none;
-        &:hover {
+}
+
+.blog__article-title {
+    width: 100%;
+    float: left;
+    display: block;
+    text-align: right;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    &.active {
+        
+        border-right: 3px solid $green;
+        .blog__article-link {
             color: $green;
-        }
+            font-weight: 600;
+        } 
     }
+}
+.blog__article-link {
+    color: #455a64;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    &:hover {
+        color: $green;
+    }
+}
+
+.blog__article {
+    padding-bottom: 70px;
+    margin-bottom: 60px;
+    border-bottom: 5px solid rgba(55, 62, 66, 0.07);
+    &:last-child {
+        border: none;
+        margin-bottom: 0;
+    }
+}
+.blog__title {
+    font-size: 35px;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: left;
+    .title span::before,
+    .title span::after {
+        display: none;
+    }
+}
+.blog__date {
+    color: $green;
+    margin-bottom: 25px;
 }
