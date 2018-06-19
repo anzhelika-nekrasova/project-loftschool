@@ -1,0 +1,23 @@
+.authorization-block {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.authorization-block__title {
+    padding-bottom: 30px;
+}
+
+.authorization-block input[type="text"] {
+    background: #fff url(assets/images/styles/login-input-bg.png) top left no-repeat;
+    padding: 0 20px 0 60px;
+}
+
+.authorization-block input[type="password"] {
+    background: #fff url(assets/images/styles/password-input-bg.png) top left no-repeat;
+    padding: 0 20px 0 60px;
+}
+
+.question {
+    font-weight: 600;
+    margin: 15px 0 5px;
+}

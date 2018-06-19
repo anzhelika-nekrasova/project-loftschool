@@ -1,29 +1,25 @@
 .block-content {
     display: grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-        "left right";
+    grid-template-areas: "left right";
     position: relative;
-
     @media (max-width: 768px) {
-        grid-template-columns: 100% ;
+        grid-template-columns: 100%;
         grid-template-rows: min-content 1fr;
-        grid-template-areas: 
-            "left"
-            "right";
+        grid-template-areas: "left" "right";
     }
-
     &__left {
         grid-area: left;
+        padding-bottom: 60px;
         @media (max-width: 768px) {
             padding-top: 40px;
             padding-bottom: 40px;
         }
     }
-
     &__right {
         grid-area: right;
+        padding-bottom: 60px;
         @media (max-width: 768px) {
             padding-top: 40px;
             padding-bottom: 40px;
@@ -41,7 +37,6 @@
     background: #eeebdf;
     padding-left: 40px;
     padding-right: 20px;
-
     @media (max-width: 1200px) {
         padding-left: 40px;
         padding-right: 10px;
@@ -54,8 +49,5 @@
 
 .works .block-content__right {
     background: #efebe0;
-
-    @media (max-width: 1200px) {
-        
-    }
+    @media (max-width: 1200px) {}
 }

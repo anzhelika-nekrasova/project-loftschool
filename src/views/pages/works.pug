@@ -42,7 +42,7 @@ block content
                         .slider__btn
         
         .feedback
-            .conteiner
+            .container-block
                 .feedback__title
                     .title.block-title.works__block-title-about
                         .title__style
@@ -70,19 +70,19 @@ block content
                 .feedback__form
                     .blur-form
                         .blur
-                        .from-message-block
+                        .form-message-block
                             .works__title
                                 .title.block-subtitle.works__block-subtitle
                                     .title__style
                                         span Связаться со мной
-                            form.from-message(action='', method='post')
+                            form.form-style.form-message(action='', method='post')
                                 input(type='text', name='name', placeholder='Имя', required='')
                                 input(type='text', name='name', placeholder='Email', required='')
                                 textarea(name='message', placeholder='Ваше сообщение', required='', rows='5')
-                                .from-message__button
+                                .form-style__button
                                     button(type='submit') Отправить
                                     button(type='reset') Очистить
 
                 .feedback__up
-                    a(href="").up-button
+                    a(href="").up-button#up-button
                         +icon('arrow_down', 'up-btn')

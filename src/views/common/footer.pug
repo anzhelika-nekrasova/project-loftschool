@@ -2,8 +2,12 @@ section.footer
     .footer__row.footer__row--top
       .footer__col
         nav.footer-menu
-          each item in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
-            a(href="").footer-menu__item #{item}
+          //each item in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
+          //  a(href="").footer-menu__item #{item}
+          a(href="/works.html").footer-menu__item Мои работы
+          a(href="/about.html").footer-menu__item Обо мне
+          a(href="/blog.html").footer-menu__item Блог
+          a(href="index.html").footer-menu__item Авторизация
 
       .footer__col.footer__col_justify_end
         +socials('footer_socials')

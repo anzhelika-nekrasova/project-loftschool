@@ -1,27 +1,55 @@
 extends ../auth.layout.pug
 
 block content
-  //.hello-world
-  //  +icon('check', 'icon-ok icon-ok--index')
-  //.inlined-svg
-
 
   .front-page-bg
     .container
-      a.button.button-login(href="#") Авторизоваться
-      .block-front
-        .user.block-front__user
-          .user__photo
-            img(src="assets/images/about/photo.jpg")
-          .user__name Анжелика Некрасова
-          .user__info Личный сайт веб разработчика
-            
-          +socials('block-front__social')
+      a.button.button-login#flipper-rotate Авторизоваться
 
-        nav.front-page-menu
-          a.front-page-menu__item(href="/works.html") Мои работы
-          a.front-page-menu__item(href="/about.html") Обо мне
-          a.front-page-menu__item(href="/blog.html") Блог
+      .flipper#flipper
+
+        .flipper__front
+          .block-front
+            .user.block-front__user
+              .user__photo
+                img(src="assets/images/about/photo.jpg")
+              .user__name Анжелика Некрасова
+              .user__info Личный сайт веб разработчика
+                
+              +socials('block-front__social')
+
+            nav.front-page-menu
+              .front-page-menu__item
+                a.front-page-menu__link(href="/works.html") Мои работы
+              .front-page-menu__item
+                a.front-page-menu__link(href="/about.html") Обо мне
+              .front-page-menu__item
+                a.front-page-menu__link(href="/blog.html") Блог
+
+        .flipper__back
+          .authorization-block.block-front
+            .block-front__user
+              .authorization-block__title
+                .title.block-subtitle.authorization-block__block-subtitle
+                  .title__style
+                    span Авторизуйтесь
+              form.form-style(action='', method='post')
+                input(type='text', name='login', placeholder='Логин', required='')
+                input(type='password', name='password', placeholder='Пароль', required='')
+                .checkbox
+                  input#check(type='checkbox', name='capcha', value='check')
+                  label(for='check') Я человек
+                
+                .radio
+                  p.question Вы точно не робот?
+                  input#answer-yes(type='radio', name='answer', value='check')
+                  label(for='answer-yes') Да
+                  input#answer-no(type='radio', name='answer', value='check')
+                  label(for='answer-no') Не уверен
+
+                .form-style__button
+                  button(type='button')#backward На главную
+                  button(type='submit') Отправить
 
     p.copyright © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018
 
