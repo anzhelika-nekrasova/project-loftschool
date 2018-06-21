@@ -1,1 +1,1 @@
-//import "./modules/parallax";
+import "./modules/parallax";

@@ -1,25 +1,34 @@
+{  
+ alert("ffgg");
 
-var parallax = (function () {
-    var bg = DOC.querySelector('header');
-    var user = DOC.querySelector('header__user');
-    var title = DOC.querySelector('header__title');
+    var parallax = (function () {
+        var bg = document.querySelector('.header__bg');
+        var user = document.querySelector('.header__user');
+        var title = document.querySelector('.header__title');
 
-    return {
-        move: function(block, windowScroll, strafeAmount) {
-            var strafe = windowScroll / -strafeAmount + '%';
+        return {
+            move: function(block, windowScroll, strafeAmount) {
+                var strafe = windowScroll / -strafeAmount + '%';
+                var transformString = 'translate3d(0,' + strafe + ', 0)';
 
-            var style = block.style;
+                var style = block.style;
 
-            style.top = strafe
-        },
+                //style.top = strafe;
 
-        init: function(wScroll) {
-            this.move(bg, wScroll, 45);
+                style.transform = transformString;
+                style.webkitTransform = transformString;
+            },
+
+            init: function(wScroll) {
+                this.move(bg, wScroll, 45);
+                this.move(title, wScroll, 20);
+                this.move(user, wScroll, 7);
+            }
         }
-    }
-}());
+    }());
 
-WIN.onscroll = function () {
-    var wScroll = window.pageYOffset;
-    parallax.init(wScroll);
+    window.onscroll = function () {
+        var wScroll = window.pageYOffset;
+        parallax.init(wScroll);
+    }
 }
