@@ -1,5 +1,4 @@
 {  
- alert("ffgg");
 
     var parallax = (function () {
         var bg = document.querySelector('.header__bg');
