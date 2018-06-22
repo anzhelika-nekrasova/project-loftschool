@@ -38,3 +38,12 @@
 .my-works-main-title {
     padding: 50px 0 50px;
 }
+
+.works .block-content__left {
+    background: #f0efe9;
+}
+
+.works .block-content__right {
+    background: #efebe0;
+    @media (max-width: 1200px) {}
+}

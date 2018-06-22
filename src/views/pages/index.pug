@@ -3,53 +3,59 @@ extends ../auth.layout.pug
 block content
 
   .front-page-bg
-    .container
-      a.button.button-login#flipper-rotate Авторизоваться
+    #parallax-front.parallax-front
+     - for (var i = 1; i <= 10; i++)
+      .parallax-front__layer 
+        img(src=`/assets/images/parallax-front/layer-${i}.png`).parallax-front__image
 
-      .flipper#flipper
+    a.button.button-login#flipper-rotate Авторизоваться
+    .container-block
+      .container.front-page-bg__container
 
-        .flipper__front
-          .block-front
-            .user.block-front__user
-              .user__photo
-                img(src="assets/images/about/photo.jpg")
-              .user__name Анжелика Некрасова
-              .user__info Личный сайт веб разработчика
-                
-              +socials('block-front__social')
+        .flipper#flipper
 
-            nav.front-page-menu
-              .front-page-menu__item
-                a.front-page-menu__link(href="/works.html") Мои работы
-              .front-page-menu__item
-                a.front-page-menu__link(href="/about.html") Обо мне
-              .front-page-menu__item
-                a.front-page-menu__link(href="/blog.html") Блог
+          .flipper__front
+            .block-front
+              .user.block-front__user
+                .user__photo
+                  img(src="assets/images/about/photo.jpg")
+                .user__name Анжелика Некрасова
+                .user__info Личный сайт веб разработчика
+                  
+                +socials('block-front__social')
 
-        .flipper__back
-          .authorization-block.block-front
-            .block-front__user
-              .authorization-block__title
-                .title.block-subtitle.authorization-block__block-subtitle
-                  .title__style
-                    span Авторизуйтесь
-              form.form-style(action='', method='post')
-                input(type='text', name='login', placeholder='Логин', required='')
-                input(type='password', name='password', placeholder='Пароль', required='')
-                .checkbox
-                  input#check(type='checkbox', name='capcha', value='check')
-                  label(for='check') Я человек
-                
-                .radio
-                  p.question Вы точно не робот?
-                  input#answer-yes(type='radio', name='answer', value='check')
-                  label(for='answer-yes') Да
-                  input#answer-no(type='radio', name='answer', value='check')
-                  label(for='answer-no') Не уверен
+              nav.front-page-menu
+                .front-page-menu__item
+                  a.front-page-menu__link(href="/works.html") Мои работы
+                .front-page-menu__item
+                  a.front-page-menu__link(href="/about.html") Обо мне
+                .front-page-menu__item
+                  a.front-page-menu__link(href="/blog.html") Блог
 
-                .form-style__button
-                  button(type='button')#backward На главную
-                  button(type='submit') Отправить
+          .flipper__back
+            .authorization-block.block-front
+              .block-front__user
+                .authorization-block__title
+                  .title.block-subtitle.authorization-block__block-subtitle
+                    .title__style
+                      span Авторизуйтесь
+                form.form-style(action='', method='post')
+                  input(type='text', name='login', placeholder='Логин', required='')
+                  input(type='password', name='password', placeholder='Пароль', required='')
+                  .checkbox
+                    input#check(type='checkbox', name='capcha', value='check')
+                    label(for='check') Я человек
+                  
+                  .radio
+                    p.question Вы точно не робот?
+                    input#answer-yes(type='radio', name='answer', value='check')
+                    label(for='answer-yes') Да
+                    input#answer-no(type='radio', name='answer', value='check')
+                    label(for='answer-no') Не уверен
 
-    p.copyright © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018
+                  .form-style__button
+                    button(type='button')#backward На главную
+                    button(type='submit') Отправить
+
+      p.copyright © Шевырталова Анжелика | создано с любовью в LoftSchool | 2018
 

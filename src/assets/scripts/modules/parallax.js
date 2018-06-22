@@ -1,9 +1,11 @@
 {  
+    const DOC = document;
+    const WIN = window;
 
     var parallax = (function () {
-        var bg = document.querySelector('.header__bg');
-        var user = document.querySelector('.header__user');
-        var title = document.querySelector('.header__title');
+        var bg = DOC.querySelector('.header__bg');
+        var user = DOC.querySelector('.header__user');
+        var title = DOC.querySelector('.header__title');
 
         return {
             move: function(block, windowScroll, strafeAmount) {
@@ -26,8 +28,8 @@
         }
     }());
 
-    window.onscroll = function () {
-        var wScroll = window.pageYOffset;
+    WIN.onscroll = function () {
+        var wScroll = WIN.pageYOffset;
         parallax.init(wScroll);
     }
 }

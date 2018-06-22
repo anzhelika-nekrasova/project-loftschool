@@ -40,6 +40,9 @@
     justify-content: center;
     font-size: 63px;
     line-height: 1em;
+    @media (max-width: 768px) {
+        font-size: 35px;
+    }
 }
 
 .block-subtitle {
@@ -49,4 +52,7 @@
     font-size: 35px;
     line-height: normal;
     color: #455a64;
+    @media (max-width: 768px) {
+        font-size: 21px;
+    }
 }

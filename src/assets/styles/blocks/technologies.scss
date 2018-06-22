@@ -5,3 +5,13 @@
         padding: 0 0 30px;
     }
 }
+
+.technologies__description {
+    @media (max-width: 1800px) {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    @media (max-width: 1800px) {
+        max-width: 470px;
+    }
+}

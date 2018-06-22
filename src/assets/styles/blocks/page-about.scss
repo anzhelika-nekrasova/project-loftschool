@@ -1,0 +1,19 @@
+.page-about .block-content__left {
+    background: #efeee9;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page-about .block-content__right {
+    background: #eeebdf;
+    padding-left: 40px;
+    padding-right: 20px;
+    @media (max-width: 1200px) {
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+    @media (max-width: 992px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
