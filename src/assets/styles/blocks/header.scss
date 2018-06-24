@@ -63,6 +63,7 @@ header {
         "left right" 1fr / 1fr 1fr;
     align-items: center;
     padding: 0 30px;
+    z-index: 100;
 
     @media (max-width: 480px) {
         padding: 0 10px;

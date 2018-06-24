@@ -38,8 +38,10 @@
 .button-go {
     background: $green;
     color: #fff;
+    border: none;
     &:hover {
         background: #009688;
         color: #fff;
+        border: none;
     }
 }
