@@ -24,6 +24,11 @@
     }
 }
 
+.front-page-bg__phone {
+    background: url(assets/images/styles/main-block-front-page-bg-mobile.jpg) top center no-repeat;
+    background-size: cover;
+}
+
 .front-page-bg__container {
     grid-column: 5 / 9;
     display: flex;

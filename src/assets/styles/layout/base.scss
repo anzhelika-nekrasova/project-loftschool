@@ -75,6 +75,9 @@ p {
     transform: translateX(-50%);
     margin: 0;
     text-align: center;
+    @media screen and (max-width: 768px) {
+        bottom: 5px;
+    }
 }
 
 .container-block {
