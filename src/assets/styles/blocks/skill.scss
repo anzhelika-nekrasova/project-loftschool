@@ -17,7 +17,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 10px 20px;
 }
 
 .skill__figure {
@@ -78,8 +79,4 @@
             margin-right: 0;
         }
     }
-}
-
-figure {
-    margin: 10px 20px;
 }

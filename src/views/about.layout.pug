@@ -14,13 +14,14 @@ html(lang="ru")
     
     .wrapper
       include ./common/header.pug
-    
+
       .content
         block content  
       .footer-position
         include ./common/footer.pug
+    
+    include ./components/modules/skills.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
-    
     block scripts

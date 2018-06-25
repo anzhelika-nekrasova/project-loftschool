@@ -1,4 +1,3 @@
-
 script(type="text/x-template")#skills-list
   ul.skills-list
     li.skills-list__item(v-for="skill in skills")
@@ -7,10 +6,10 @@ script(type="text/x-template")#skills-list
       )
 
 script(type="text/x-template")#skills-row
-  .skllls-row
-    .skills-list__title {{skill.skillsGroup}}
+  .skills-row
+    .skills-row__title {{skill.skillsGroup}}
     ul.skills
-      li.skills-list__item(v-for="(skillPercents, skillName) in skill.skills")
+      li.skills-row__item(v-for="(skillPercents, skillName) in skill.skills")
         skill(
           :skillName="skillName"
           :skillPercents="skillPercents"
