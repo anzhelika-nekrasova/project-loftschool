@@ -4,7 +4,7 @@ block variables
   - var title = 'Мои работы'
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='works.bundle.js')
 
 block content
 
@@ -16,30 +16,35 @@ block content
             .title.block-title.works__block-title
                 .title__style
                     span Мои работы
+        
+        .slider-container
+            #slider-component
+                include ../components/modules/slider.pug
             
-        .block-content.slider
-            .block-content__left
-                .slider__info-container
-                    .slider__info
-                        .slider__info-title
-                            .title.block-subtitle.works__block-subtitle
-                                .title__style
-                                    span Сайт школы онлайн образования
-                        .slider__info-skills HTML , CSS, JAVASCRIPT
-                        .slider__info-button
-                            a(:href="" target="_blank").button.button-go Посмотреть сайт
-            .block-content__right
-                .slider__display
-                    img(src="assets/images/sites/site1.png")
-                .slider__buttons
-                    .slider__button
-                        .slider__button-img-wrap
-                            img(src="assets/images/sites/site1.png").slider__button-pic
-                        .slider__btn
-                    .slider__button.slider__button--next
-                        .slider__button-img-wrap
-                            img(src="assets/images/sites/site1.png").slider__button-pic
-                        .slider__btn
+        //-    
+            .block-content.slider
+                .block-content__left
+                    .slider__info-container
+                        .slider__info
+                            .slider__info-title
+                                .title.block-subtitle.works__block-subtitle
+                                    .title__style
+                                        span Сайт школы онлайн образования
+                            .slider__info-skills HTML , CSS, JAVASCRIPT
+                            .slider__info-button
+                                a(:href="" target="_blank").button.button-go Посмотреть сайт
+                .block-content__right
+                    .slider__display
+                        img(src="assets/images/sites/site1.png")
+                    .slider__buttons
+                        .slider__button
+                            .slider__button-img-wrap
+                                img(src="assets/images/sites/site1.png").slider__button-pic
+                            .slider__btn
+                        .slider__button.slider__button--next
+                            .slider__button-img-wrap
+                                img(src="assets/images/sites/site1.png").slider__button-pic
+                            .slider__btn
         
         .feedback
             .container-block

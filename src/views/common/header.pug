@@ -1,6 +1,5 @@
 header.header
-  include ./hamburger-menu.pug
-  
+    
   .header__bg
     img(src="assets/images/header-bg.jpg")
   .header__top.header-top-container
@@ -9,8 +8,7 @@ header.header
       +socials('header__social')
 
     .header__right
-      a(href="").hamburger
-        +icon('hamburger', 'hamburger__icon')
+      include ./hamburger-menu.pug
 
   .header__center
 

@@ -11,6 +11,9 @@
             position: absolute;
             top: -30px;
             left: 0;
+            @media screen and (max-width: 768px) {
+                height: 85px;
+            }
         }
     }
     &__block-title-about {
@@ -23,6 +26,10 @@
             background-size: contain;
             position: absolute;
             left: 0;
+            @media screen and (max-width: 768px) {
+                height: 85px;
+                top: -30px;
+            }
         }
         span {
             width: 290px;

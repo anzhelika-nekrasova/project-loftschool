@@ -15,7 +15,8 @@
     }
     &__image {
         position: absolute;
-        width: 100%;
+        width: calc(100% + 170px);
+        height: calc(100% + 100px);
         left: 50%;
         transform: translateX(-50%);
         top: 0;
