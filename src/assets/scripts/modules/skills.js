@@ -47,3 +47,22 @@ created() {
 },
 template: "#skills-list"
 });
+
+
+{
+  addEventListener("scroll", function() {
+    var elementSkills = document.querySelector('.skills');
+    var skillsPosition = elementSkills.getBoundingClientRect();
+
+    if (skillsPosition.top < 400) {
+      //document.getElementsByClassName('skill__circle_above').add('skill__animation');
+    // document.querySelectorAll('skill__circle_above').classList.add('skill__animation');
+     var list, i;
+     list = Array.from(document.querySelectorAll('.skill__circle_above'));
+     for (i = 0; i < list.length; i++) {
+         list[i].classList.add('skill__animation');
+     }
+
+    }
+  });
+}
