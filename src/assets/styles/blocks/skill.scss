@@ -51,17 +51,6 @@
 }
 
 .skills-row {
-    &__list {
-        width: 100%;
-        height: auto;
-        display: block;
-        float: left;
-        @media (max-width: 992px) {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    }
     &__title {
         font-size: 28px;
         font-weight: 500;
@@ -78,5 +67,17 @@
         &:last-child figure {
             margin-right: 0;
         }
+    }
+}
+
+.skills {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    @media (max-width: 992px) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
