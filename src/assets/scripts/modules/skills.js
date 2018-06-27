@@ -43,13 +43,13 @@ data: {
 created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
-    console.log(data);
+    //console.log(data);
 },
 template: "#skills-list"
 });
 
 
-{
+/*
   addEventListener("scroll", function() {
     var elementSkills = document.querySelector('.skills');
     var skillsPosition = elementSkills.getBoundingClientRect();
@@ -58,11 +58,11 @@ template: "#skills-list"
       //document.getElementsByClassName('skill__circle_above').add('skill__animation');
     // document.querySelectorAll('skill__circle_above').classList.add('skill__animation');
      var list, i;
-     list = Array.from(document.querySelectorAll('.skill__circle_above'));
+     list = Array.from(document.querySelectorAll('.skill__circle_animate'));
      for (i = 0; i < list.length; i++) {
-         list[i].classList.add('skill__animation');
+         list[i].classList.add('skill__circle_above');
      }
 
     }
   });
-}
+*/

@@ -41,25 +41,6 @@ block content
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .technologies__content
         #skills-container
-        //-
-          var skills = [
-            ['Frontend', [['HTML', 30], ['CSS3', 50], ['JavaScript & jQuery', 70]]],
-            ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70], ['Mongo.db', 70]]],
-            ['Workflow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
-          ]
-
-      //-  ul.skills-list
-          each skillsrow in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skills-row__list
-                each skill in skillsrow[1]
-                  li.skills-row__item
-                    figure.skill(data-percents="70")
-                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                      .skill__title #{skill[0]}
 
   section.map
     .google-map

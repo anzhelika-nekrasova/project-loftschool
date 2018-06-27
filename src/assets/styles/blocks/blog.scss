@@ -19,7 +19,21 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         @media screen and (max-width: 992px) {
-            display: none;
+            //display: none;
+            background: $green;
+            height: 100vh;
+            position: fixed;
+            width: 284px;
+            z-index: 500;
+            left: 0;
+            top: 0;
+            //box-shadow: 0 0 10px 5px #ccc;
+            will-change: transform;
+            transition: transform 1s;
+            transform: translateX(-100%);
+            &.on {
+                transform: translateX(0%);
+            }
         }
     }
     &__right {
@@ -30,6 +44,12 @@
         padding: 0 24px 0 120px;
         @media screen and (max-width: 992px) {
             padding: 0 24px;
+            will-change: transform;
+            transition: transform 1s;
+            transform: translateX(0%);
+            &.on {
+                transform: translateX(284px);
+            }
         }
     }
 }
@@ -44,6 +64,21 @@
     width: 100%!important;
     max-width: 300px;
     position: relative;
+    z-index: 100;
+    @media screen and (max-width: 992px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.blog__article-list--fixed {
+    position: fixed;
+    top: 30px;
+    @media screen and (max-width: 992px) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .blog__article-title {
@@ -58,6 +93,10 @@
         .blog__article-link {
             color: $green;
             font-weight: 600;
+            @media screen and (max-width: 992px) {
+                color: #fff;
+                opacity: 1;
+            }
         }
     }
 }
@@ -69,6 +108,14 @@
     text-decoration: none;
     &:hover {
         color: $green;
+        @media screen and (max-width: 992px) {
+            color: #fff;
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        color: #fff;
+        opacity: 0.7;
     }
 }
 
@@ -106,4 +153,20 @@
 
 .article-title.title span {
     text-align: left;
+}
+
+.blog__article-adaptive-btn {
+    display: none;
+    @media (max-width: 992px) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        background: $green;
+        cursor: pointer;
+    }
 }

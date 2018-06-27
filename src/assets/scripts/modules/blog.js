@@ -34,7 +34,7 @@ $(function() {
         else {
             articles.forEach((article) => {
                 const elemTop = getCoords(article).top;
-                if (WIN.pageYOffset > elemTop - 150) {
+                if (WIN.pageYOffset > elemTop - 200) {
                     setActive(article);
                 }
             });
@@ -46,16 +46,10 @@ $(function() {
         const elemChords = getCoords($articleTitles[0]);
 
         if (WIN.pageYOffset >= elemChords.top - 30) {
-
-            $articlesList.css({
-                'position': 'fixed',
-                'top': 30 + 'px',
-            })
+            $articlesList.addClass('blog__article-list--fixed');
         }
         else {
-            $articlesList.css({
-                'position': 'static'
-            })
+            $articlesList.removeClass('blog__article-list--fixed');
         }
     }
 
@@ -79,4 +73,52 @@ $(function() {
         });
 
     }
+
+    //плавный переход по ссылке
+    /*
+    $('.blog__article-list').on('click','a', function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href');
+        var topScroll = $(id).offset().top;
+        $('body,html').animate({scrollTop: topScroll}, 1500);
+    }); */
+
+    //Левое меню статей на мобилках и планшетах. Свайп
+    let isOn = false;
+    const slidebar = $('.blog-content__left');
+    const contentArticle = $('.blog-content__right');
+
+    const hide = () => {
+        slidebar.removeClass("on");
+        contentArticle.removeClass("on");
+        isOn = false;
+    };
+
+    $('body').on('click', function(e) {
+
+        if ($(e.target).closest('#blog__article-adaptive-btn').length) {
+            if (!isOn) {
+                slidebar.addClass("on");
+                contentArticle.addClass("on");
+                isOn = true;
+            }
+            else {
+                if (isOn) {
+                    hide();
+                }
+            }
+        }
+        else {
+            if (isOn) {
+                hide();
+            }
+        }
+
+    });
+
+
+
+
+
+
 });
