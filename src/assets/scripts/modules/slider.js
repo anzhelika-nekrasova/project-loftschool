@@ -7,7 +7,7 @@ const info = {
   },
   methods: {
     callback(eventName) {
-      console.log(eventName);
+      //console.log(eventName);
     },
     enterHandler(el, done) {
       const sentence = el.innerText.trim();
@@ -112,7 +112,7 @@ new Vue({
   },
   methods: {
     handleSlide(direction) {
-      console.log(direction);
+      //console.log(direction);
       switch (direction) {
         case "next":
           this.currentIndex = this.currentIndex + 1;

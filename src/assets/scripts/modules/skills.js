@@ -13,8 +13,15 @@ const skill = {
           getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
         );
         const persents = (dashOffset / 100) * (100 - this.skillPercents);
-  
-        circle.style.strokeDashoffset = persents;
+        
+        addEventListener("scroll", function() {
+          const elementSkills = document.querySelector('.skills');
+          var skillsPosition = elementSkills.getBoundingClientRect();
+
+          if (skillsPosition.top < 400) {
+            circle.style.strokeDashoffset = persents;
+          }
+        });
       }
     },
     mounted() {
@@ -47,22 +54,3 @@ created() {
 },
 template: "#skills-list"
 });
-
-
-/*
-  addEventListener("scroll", function() {
-    var elementSkills = document.querySelector('.skills');
-    var skillsPosition = elementSkills.getBoundingClientRect();
-
-    if (skillsPosition.top < 400) {
-      //document.getElementsByClassName('skill__circle_above').add('skill__animation');
-    // document.querySelectorAll('skill__circle_above').classList.add('skill__animation');
-     var list, i;
-     list = Array.from(document.querySelectorAll('.skill__circle_animate'));
-     for (i = 0; i < list.length; i++) {
-         list[i].classList.add('skill__circle_above');
-     }
-
-    }
-  });
-*/
