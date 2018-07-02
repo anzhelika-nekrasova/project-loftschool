@@ -10,9 +10,8 @@
 
             return {
                 set: function () {
-                    var imgWidth = DOC.querySelector('.blur-bg').offsetWidth,
-                        posLeft = -wrapper.offsetLeft - 10,
-                        posTop = -feedback.offsetTop + 68,
+                    var posLeft = -wrapper.offsetLeft - 10,
+                        posTop = -feedback.offsetTop,
                         blurCSS = form.style;
                         console.log(posTop);
 
