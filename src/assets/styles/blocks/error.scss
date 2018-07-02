@@ -1,0 +1,28 @@
+.not_error {
+    border: 1px solid $green!important;
+}
+
+.error {
+    border: 1px solid red!important;
+}
+
+.error-box {
+    position: absolute;
+    background: #e44845;
+    width: 180px;
+    color: #fff;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 4px;
+    left: 10%;
+    display: none;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 9px solid transparent;
+        border-bottom: 9px solid #e44845;
+        top: -18px;
+        left: calc(50% - 9px);
+    }
+}

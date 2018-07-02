@@ -1,0 +1,68 @@
+.preloader-page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    //background: url(assets/images/styles/preloader-bg.jpg) top center no-repeat;
+    //background-size: cover;
+    background: $green;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__circle-one {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 100%;
+    border-top: 5px solid #fff;
+    will-change: transform;
+    animation: loader 2.5s infinite linear;
+    opacity: .5;
+}
+
+.preloader__circle-two {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 100%;
+    border-top: 5px solid #fff;
+    will-change: transform;
+    animation: loader 3.5s infinite linear;
+    opacity: .7;
+}
+
+.preloader__circle-three {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 100%;
+    border-top: 5px solid #fff;
+    will-change: transform;
+    animation: loader 3s infinite linear;
+    opacity: 1;
+}
+
+.preloader__percent {
+    color: #fff;
+    font-size: 20px;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

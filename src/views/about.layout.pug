@@ -12,6 +12,7 @@ html(lang="ru")
     link(rel='stylesheet' href='main.min.css')
   body
     
+    include ./common/preloader.pug
     .wrapper
       include ./common/header.pug
 
@@ -24,4 +25,5 @@ html(lang="ru")
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
+    script(src="about.bundle.js")
     block scripts
