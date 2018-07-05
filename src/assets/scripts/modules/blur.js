@@ -10,12 +10,11 @@
 
             return {
                 set: function () {
-                    var posLeft = -wrapper.offsetLeft - 10,
-                        posTop = -feedback.offsetTop,
+                    var posLeft = -wrapper.offsetLeft,
+                        posTop = -feedback.offsetTop + DOC.querySelector('.blur-bg img').offsetTop,
                         blurCSS = form.style;
-                        console.log(posTop);
+                        //console.log(posTop);
 
-                    //blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
                     blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
                 }
             }

@@ -24,13 +24,15 @@ block content
         .feedback
             .blur-bg
                 img(src="assets/images/styles/background-feedback.png")
-            .container-block
-                .feedback__title
+            
+            .feedback__title
+                .container-block
                     .title.block-title.works__block-title-about
                         .title__style
                             span Что обо мне говорят
-                
-                .feedback__content
+            
+            .feedback__content
+                .container-block
                     .reviews
                         .reviews__left
                             .reviews__content
@@ -49,35 +51,36 @@ block content
                                     .reviews__name Сабанцев Владимир #[br]
                                         span преподаватель
 
-                .feedback__form
-                    .blur-form
-                        .blur
-                        .form-message-block
-                            .works__title
-                                .title.block-subtitle.works__block-subtitle
-                                    .title__style
-                                        span Связаться со мной
-                            form.form-style.form-message(action='', method='post')
-                                input(type='text', name='name', placeholder='Имя', required='')
-                                .error-box
-                                input(type='text', name='email', placeholder='Email', required='')
-                                .error-box
-                                textarea(name='message', placeholder='Ваше сообщение', required='', rows='5')
-                                .form-style__button
-                                    button(type='submit')#form-style__button-submit Отправить
-                                    button(type='reset')#form-style__button-reset Очистить
-                    
-                    .message-send.message-send-done
-                        .message-send__block
-                            p Сообщение отправлено
-                            button(type='button').message-send__exit Закрыть
-                    
-                    .message-send.message-send-error
-                        .message-send__block
-                            p Необходимо заполнить все поля
-                            button(type='button').message-send__exit Закрыть
+            .feedback__form
+                .blur-form
+                    .blur
+                    .form-message-block
+                        .works__title
+                            .title.block-subtitle.works__block-subtitle
+                                .title__style
+                                    span Связаться со мной
+                        form.form-style.form-message(action='', method='post')
+                            input(type='text', name='name', placeholder='Имя', required='')
+                            .error-box
+                            input(type='text', name='email', placeholder='Email', required='')
+                            .error-box
+                            textarea(name='message', placeholder='Ваше сообщение', required='', rows='5')
+                            .form-style__button
+                                button(type='submit')#form-style__button-submit Отправить
+                                button(type='reset')#form-style__button-reset Очистить
+                
+                .message-send.message-send-done
+                    .message-send__block
+                        p Сообщение отправлено
+                        button(type='button').message-send__exit Закрыть
+                
+                .message-send.message-send-error
+                    .message-send__block
+                        p Необходимо заполнить все поля
+                        button(type='button').message-send__exit Закрыть
 
-                .feedback__up
+            .feedback__up
+                .container-block
                     a(href="").up-button#up-button
                         +icon('arrow_down', 'up-btn')
                 
