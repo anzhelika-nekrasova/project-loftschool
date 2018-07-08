@@ -1,0 +1,32 @@
+script(type="text/x-template")#auth-form
+    div
+        .form-style
+            input(
+                type='text'
+                name='login'
+                placeholder='Логин'
+                required=''
+                v-model="user.name")
+            input(
+                type='password'
+                name='password'
+                placeholder='Пароль'
+                required=''
+                v-model="user.password")
+            .checkbox
+                input#check(
+                    type='checkbox'
+                    name='capcha'
+                    value='check')
+                label(for='check') Я человек
+            
+            .radio
+                p.question Вы точно не робот?
+                input#answer-yes(type='radio', name='answer', value='check')
+                label(for='answer-yes') Да
+                input#answer-no(type='radio', name='answer', value='check')
+                label(for='answer-no') Не уверен
+
+            .form-style__button
+                button(type='button')#backward На главную
+                button(@click="login") Отправить
