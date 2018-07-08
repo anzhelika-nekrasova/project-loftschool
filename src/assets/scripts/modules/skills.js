@@ -1,4 +1,5 @@
 import Vue from "vue";
+import axios from "axios";
 
 const skill = {
     template: "#skill",
@@ -25,6 +26,7 @@ const skill = {
       }
     },
     mounted() {
+      console.log(localStorage);
       this.drawCircle();
     }
   };
@@ -51,6 +53,12 @@ created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
     //console.log(data);
+},
+mounted() {
+  axios.get(`http://webdev-api.loftschool.com/skills/13`).then(response => {
+    this.skills = response.data;
+    console.log(response.data);
+  });
 },
 template: "#skills-list"
 });
