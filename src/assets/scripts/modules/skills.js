@@ -50,14 +50,31 @@ data: {
     skills: {}
 },
 created() {
-    const data = require("../../../data/skills.json");
-    this.skills = data;
+    //const data = require("../../../data/skills.json");
+    //this.skills = data;
     //console.log(data);
 },
 mounted() {
   axios.get(`http://webdev-api.loftschool.com/skills/13`).then(response => {
+    //console.log(Array.from(response.data));
+    var arr = Array.from(response.data);
+    var skillsAdmin = [{}];
+    arr.forEach(function(item, i, arr) {
+      var skilltitle = item.title;
+      skillsAdmin.push({
+        'skillsGroup': item.category,
+        'skills': {
+          'skillName': item.title,
+          'skillPercents': item.percents
+        }
+        
+      });
+
+    });
+    console.log(skillsAdmin);
+    //this.skills = skillsAdmin.slice();
     this.skills = response.data;
-    console.log(response.data);
+    console.log(this.skills);
   });
 },
 template: "#skills-list"

@@ -48,6 +48,7 @@ html {
 
 .wrapper {
   height: 100%;
+  background: #e5eaee;
 }
 
 #root {
@@ -71,6 +72,7 @@ ul {
 
 * {
   box-sizing: border-box;
+  color: #455a64;
 }
 
 .tabs {
@@ -80,5 +82,85 @@ ul {
 .content {
   flex: 1;
   padding: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+input[type="text"],
+input[type="file"]{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    color: #373e42;
+    line-height: 45px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+    &::placeholder {
+        opacity: .5;
+    }
+}
+
+textarea {
+    width: 100%;
+    min-height: 140px;
+    resize: none;
+    font-family: 'Roboto';
+    color: #373e42;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    &::placeholder {
+        opacity: .5;
+    }
+}
+
+input[type="text"].percents {
+  width: 70px;
+  margin-bottom: 0;
+}
+
+input[type="text"].skill {
+  margin-bottom: 0;
+}
+
+button {
+    width: 180px;
+    height: 45px;
+    text-decoration: none;
+    display: block;
+    line-height: 43px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    background: $green;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+        background: #009688;
+        color: #fff;
+    }
+}
+
+.skills-title{
+  font-weight: 600;
+}
+
+.skills-list {
+  margin: 0 30px;
 }
 </style>

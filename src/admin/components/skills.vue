@@ -1,7 +1,7 @@
 <template lang="pug">
   #about
     button(@click="logout()") Выйти
-    h1 Страница обо мне
+    h2 Страница "Обо мне"
     skillsRow(
       v-for="type in types"
       :key="type.name"

@@ -1,5 +1,7 @@
 <template lang="pug">
   div
+    h2 Страница "Мои работы"
+    p Добавить работу
     input(type="text" placeholder="Название проекта" v-model="work.title")
     br
     input(type="text" placeholder="Технологии" v-model="work.techs")
@@ -8,8 +10,7 @@
     br
     input(type="file" @change="addPhoto")
     br
-    hr
-    button(@click="addNewWork") Добавить работу
+    button(@click="addNewWork") Добавить
 </template>
 
 <script>

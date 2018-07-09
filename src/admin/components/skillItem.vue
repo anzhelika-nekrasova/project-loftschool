@@ -5,18 +5,17 @@
       span {{skill.percents}} %
     td 
       button(type="button" @click="removeItem") Удалить
-
+    br
   tr.skills-item(v-else)
     td 
-      input(
+      input.skill(
         type="text" 
         placeholder="new skill"
         v-model="newSkill.title"
       )
     td
-      input(
+      input.percents(
         type="text" 
-        placeholder="pecents"
         v-model="newSkill.percents"
       )
       span %
