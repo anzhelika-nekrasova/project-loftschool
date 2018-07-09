@@ -44,6 +44,7 @@ body,
 html {
   margin: 0;
   height: 100%;
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -59,6 +60,11 @@ html {
 
 .header {
   height: 80px;
+}
+
+.title {
+  color: #fff;
+  font-size: 28px;
 }
 
 ul {
@@ -105,6 +111,7 @@ input[type="file"]{
     outline: none;
     border-radius: 4px;
     font-size: 16px;
+    max-width: 300px;
     &::placeholder {
         opacity: .5;
     }
@@ -122,6 +129,7 @@ textarea {
     border-radius: 4px;
     margin-bottom: 20px;
     font-size: 16px;
+    max-width: 500px;
     &::placeholder {
         opacity: .5;
     }
@@ -162,5 +170,15 @@ button {
 
 .skills-list {
   margin: 0 30px;
+}
+
+.link {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.router-link-exact-active {
+  background: #fff;
+  color: $green;
 }
 </style>
