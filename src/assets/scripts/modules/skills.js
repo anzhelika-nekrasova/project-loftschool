@@ -50,10 +50,11 @@ data: {
     skills: {}
 },
 created() {
-    //const data = require("../../../data/skills.json");
-    //this.skills = data;
+    const data = require("../../../data/skills.json");
+    this.skills = data;
     //console.log(data);
 },
+/*
 mounted() {
   axios.get(`http://webdev-api.loftschool.com/skills/13`).then(response => {
     //console.log(Array.from(response.data));
@@ -76,6 +77,6 @@ mounted() {
     this.skills = response.data;
     console.log(this.skills);
   });
-},
+}, */
 template: "#skills-list"
 });

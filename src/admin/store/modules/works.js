@@ -4,7 +4,7 @@ const works = {
   },
   mutations: {
     fillUpWorks(state, works) {
-      state.data = skills;
+      state.data = works;
     }
   },
   actions: {

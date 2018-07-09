@@ -3,8 +3,8 @@ const articles = {
       data: []
     },
     mutations: {
-      addArticle(state, article) {
-        state.data.push(article);
+      addArticle(state, articles) {
+        state.data.push(articles);
       },
       removeArticle(state, articleId) {
         state.data = state.data.filter(item => item.id !== articleId);
